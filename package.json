@@ -42,9 +42,6 @@
   "bugs": {
     "url": "https://github.com/sanketkheni01/fire-import/issues"
   },
-  "bin": {
-    "fire-import": "./dist/index.js"
-  },
   "type": "module",
   "devDependencies": {
     "@types/mocha": "^9.1.0",
