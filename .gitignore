@@ -1,5 +1,5 @@
 node_modules/
-dist
+!dist
 assets/cover.afdesign
 yarn.lock
 package-lock.json
