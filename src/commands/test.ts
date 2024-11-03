@@ -1,21 +1,21 @@
-import fs from 'fs-extra'
-import path from 'path'
-import getFiles from '../utils/readFiles.js'
+import fs from "fs-extra";
+import path from "path";
+import getFiles from "../utils/readFiles.js";
 
 export default async function test() {
-  let files = await getFiles('./firebaseExport/storage_export/blobs')
+  let files = await getFiles("./firebaseExport/storage_export/blobs");
   let __dirname = path.resolve(
-    `./firebaseExport/storage_export/blobs/${'de-sd2291d0'}.appspot.com`
-  )
+    `./firebaseExport/storage_export/blobs/${"de-sd2291d0"}.firebasestorage.app`
+  );
   for (let filepath of files) {
-    let file_name = filepath.replace(__dirname + path.sep, '')
+    let file_name = filepath.replace(__dirname + path.sep, "");
     fs.ensureDirSync(
-      './firebaseExport/storage_export/metadata/' +
+      "./firebaseExport/storage_export/metadata/" +
         file_name.substring(0, file_name.lastIndexOf(path.sep) + 1)
-    )
+    );
     fs.writeJsonSync(
-      './firebaseExport/storage_export/metadata/' + file_name + '.json',
-      { demp: 'hello' }
-    )
+      "./firebaseExport/storage_export/metadata/" + file_name + ".json",
+      { demp: "hello" }
+    );
   }
 }
