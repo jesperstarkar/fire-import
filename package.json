@@ -4,7 +4,7 @@
   "description": "Import your firebase data to your local firebase emulators",
   "main": "./dist/index.js",
   "directories": {
-    "bin": "dist/"
+    "bin": "./dist/"
   },
   "scripts": {
     "watch": "tsc --watch",
